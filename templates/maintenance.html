@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Wynn Palace — Under Maintenance</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Rajdhani:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body {
+    background:linear-gradient(160deg,#03050a 0%,#050810 60%,#080318 100%);
+    min-height:100vh; display:flex; align-items:center; justify-content:center;
+    font-family:'Rajdhani',sans-serif; color:#e8dfc8;
+  }
+  .card {
+    text-align:center; padding:40px 28px; max-width:360px; width:90%;
+    background:rgba(13,21,48,0.6); border:1px solid rgba(201,168,76,0.2);
+    border-radius:20px; backdrop-filter:blur(10px);
+  }
+  .logo { font-family:'Cinzel',serif; font-size:22px; color:#f0d080; letter-spacing:2px; margin-bottom:6px; }
+  .icon { font-size:56px; margin:20px 0; animation:spin 4s linear infinite; display:inline-block; }
+  @keyframes spin { 0%,100%{transform:rotate(-10deg)} 50%{transform:rotate(10deg)} }
+  h2 { font-family:'Cinzel',serif; font-size:18px; color:#f0d080; margin-bottom:12px; }
+  p { font-size:14px; color:#6b7a99; line-height:1.6; }
+  .dot-row { display:flex; justify-content:center; gap:8px; margin-top:24px; }
+  .dot { width:8px; height:8px; border-radius:50%; background:#c9a84c; animation:blink 1.4s infinite; }
+  .dot:nth-child(2) { animation-delay:0.2s; }
+  .dot:nth-child(3) { animation-delay:0.4s; }
+  @keyframes blink { 0%,100%{opacity:0.2} 50%{opacity:1} }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="logo">♛ WYNN PALACE</div>
+  <div class="icon">🔧</div>
+  <h2>Under Maintenance</h2>
+  <p>We're making improvements to bring you a better experience. Please check back shortly.</p>
+  <div class="dot-row">
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+  </div>
+</div>
+</body>
+</html>

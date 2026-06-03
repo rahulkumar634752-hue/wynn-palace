@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Login — Wynn Palace</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Rajdhani:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    background: #05080f;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Rajdhani', sans-serif;
+  }
+  .login-box {
+    background: linear-gradient(135deg, #0f1525, #1a2540);
+    border: 1px solid rgba(201,168,76,0.3);
+    border-radius: 20px;
+    padding: 40px 32px;
+    width: 90%;
+    max-width: 380px;
+    text-align: center;
+  }
+  .crown { font-size: 48px; margin-bottom: 8px; filter: drop-shadow(0 0 12px rgba(201,168,76,0.5)); }
+  h1 { font-family: 'Cinzel', serif; color: #f0d080; font-size: 20px; margin-bottom: 4px; }
+  .sub { color: #6b7a99; font-size: 13px; margin-bottom: 28px; }
+  .error { background: rgba(230,57,70,0.15); border: 1px solid rgba(230,57,70,0.4); color: #e63946; border-radius: 8px; padding: 10px; margin-bottom: 16px; font-size: 13px; }
+  label { display: block; text-align: left; color: #6b7a99; font-size: 12px; font-weight: 600; margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.5px; }
+  input[type=password] {
+    width: 100%; background: rgba(255,255,255,0.06); border: 1px solid rgba(201,168,76,0.25);
+    border-radius: 10px; padding: 13px 16px; color: #e8dfc8; font-family: 'Rajdhani', sans-serif;
+    font-size: 16px; outline: none; margin-bottom: 20px;
+  }
+  input[type=password]:focus { border-color: rgba(201,168,76,0.6); }
+  button {
+    width: 100%; background: linear-gradient(135deg, #8a6a1f, #c9a84c);
+    border: none; border-radius: 12px; padding: 14px; color: #000;
+    font-family: 'Cinzel', serif; font-size: 15px; font-weight: 700;
+    letter-spacing: 1px; cursor: pointer;
+  }
+  button:active { transform: scale(0.98); }
+</style>
+</head>
+<body>
+<div class="login-box">
+  <div class="crown">♛</div>
+  <h1>WYNN PALACE</h1>
+  <div class="sub">Owner Admin Panel</div>
+  {% if error %}
+  <div class="error">⚠️ {{ error }}</div>
+  {% endif %}
+  <form method="POST">
+    <label>Admin Password</label>
+    <input type="password" name="password" placeholder="Enter password" autofocus>
+    <button type="submit">🔐 LOGIN</button>
+  </form>
+</div>
+</body>
+</html>
